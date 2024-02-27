@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import './Store.css';
+
 import IconSwitch from "../iconswitch/IconSwitch";
 
 function Store({ products }) {
@@ -16,11 +18,18 @@ function Store({ products }) {
   }
 
   return (
-      <div className='store'>
-        <header className="storeheader">
-          <IconSwitch icon={dataView} onSwitch={onSwitch}></IconSwitch>
-        </header>
+    <div className='store'>
+      <div className="storeheader">
+        <IconSwitch icon={dataView} onSwitch={onSwitch}></IconSwitch>
       </div>
+      <div className="listcontainer">
+
+      </div>
+      <div className="cardscontainer">
+
+      </div>
+
+    </div>
   );
 }
 

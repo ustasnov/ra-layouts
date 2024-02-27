@@ -1,9 +1,9 @@
-function IconSwitch({icon, onSwitch}) {
+import './IconSwitch.css'
+
+function IconSwitch({ icon, onSwitch }) {
 
   return (
-    <div className="switchbutton">
-      <span className="material-icons md-24" onClick={onSwitch}>{icon}</span>
-    </div>
+    <span className="material-icons md-24" onClick={onSwitch}>{icon}</span>
   );
 }
 
