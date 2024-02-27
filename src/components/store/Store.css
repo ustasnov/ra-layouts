@@ -7,3 +7,11 @@
 .storeheader {
   text-align: right;
 }
+
+.listcontainer.view_module {
+  display: none;
+}
+
+.cardscontainer.view_list {
+  display: none;
+}

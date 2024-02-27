@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Store.css';
-
+import CardsView from "../cardsview/CardsView";
 import IconSwitch from "../iconswitch/IconSwitch";
 
 function Store({ products }) {
@@ -22,13 +22,12 @@ function Store({ products }) {
       <div className="storeheader">
         <IconSwitch icon={dataView} onSwitch={onSwitch}></IconSwitch>
       </div>
-      <div className="listcontainer">
+      <div className={"cardscontainer " + dataView}>
+        <CardsView cards={products}></CardsView>
+      </div>
+      <div className={"listcontainer " + dataView}>
 
       </div>
-      <div className="cardscontainer">
-
-      </div>
-
     </div>
   );
 }
