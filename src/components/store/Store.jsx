@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import './Store.css';
 import CardsView from "../cardsview/CardsView";
+import ListView from "../listview/ListView";
 import IconSwitch from "../iconswitch/IconSwitch";
 
 function Store({ products }) {
@@ -14,7 +16,6 @@ function Store({ products }) {
       iconName = "view_module";
     }
     setDataView(iconName);
-    console.log("change state here");
   }
 
   return (
@@ -26,10 +27,21 @@ function Store({ products }) {
         <CardsView cards={products}></CardsView>
       </div>
       <div className={"listcontainer " + dataView}>
-
+        <ListView cards={products}></ListView>
       </div>
     </div>
   );
+}
+
+Store.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      price: PropTypes.string,
+      color: PropTypes.string,
+      img: PropTypes.string
+    })
+  )
 }
 
 export default Store

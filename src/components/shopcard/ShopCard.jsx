@@ -1,7 +1,7 @@
+import PropTypes from 'prop-types';
 import "./ShopCard.css";
 
-function ShopCard(props) {
-  const {name, price, color, img, buttontext} = props;
+function ShopCard({name, price, color, img, buttontext}) {
 
   return (
     <div className="shopcard">
@@ -16,6 +16,14 @@ function ShopCard(props) {
       </div>  
     </div>
   )
+}
+
+ShopCard.propTypes = {
+  name: PropTypes.string,
+  price: PropTypes.string,
+  color: PropTypes.string,
+  img: PropTypes.string,
+  buttontext: PropTypes.string
 }
 
 export default ShopCard
